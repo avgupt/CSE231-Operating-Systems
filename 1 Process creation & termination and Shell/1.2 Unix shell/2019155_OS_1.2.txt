@@ -1,0 +1,70 @@
+﻿Commands to run the program:
+1. make
+2. ./program
+
+
+
+
+Commands in makefile:
+           gcc  code.c -o program
+           gcc  date.c -o date
+           gcc  ls.c -o ls
+           gcc  cat.c -o cat
+           gcc  rm.c -o rm
+        gcc  mkdir.c -o mkdir
+
+
+(Compiles all the files separately.)                      
+
+
+
+
+Commands handled:
+* cd [OPTION]
+* echo -n [string]
+* echo -e [string]
+* pwd -P
+* pwd -L
+* exit
+* date -u
+* date -r [file]
+* ls -1 [Path]
+* ls -m [path]
+* cat -E [file]
+* cat -n [file]
+* mkdir -v [directory name]
+* mkdir -p [directory name]
+* rm -f [file]
+* rm -d [directory]
+
+
+
+
+System calls:
+
+
+* cd: chdir()
+* pwd: getcdwd()
+* ls: scandir()
+* mkdir: mkdir()
+* rm: rmdir(), unlink()
+* cat: open(), read(), write()
+* perror()
+
+
+
+
+Exception handling:
+perror() in case the system call returns -1 and the program is not executed further. In case the user uses an invalid flag or command, error will be displayed.
+
+
+
+
+Assumptions:
+
+
+* The user will provide one flag at a time.
+* The user will provide one file at a time.
+* The user will not use pipelines.
+* The user will not direct the output of one command to a file.
+* The user will ensure that there are no redundant spaces in the command. Each part of the program is separated by one space.

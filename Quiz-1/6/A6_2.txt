@@ -1,0 +1,4 @@
+﻿Quiz 1 - problem6
+
+
+The program P6_1.c stores the name in the main memory, while the P6_2.c stores the name in disc. On restarting the pc, the string name in P6_1.c would be lost, while P6_2.c creates a .txt file and writes the name in this file, which remains on the disc even after restarting.

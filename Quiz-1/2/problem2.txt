@@ -1,0 +1,15 @@
+﻿Quiz 1 - Problem 2
+
+
+* Command used: gcc -c <file_name>.c
+* Warnings:
+
+
+  
+
+
+
+* Explanation: 
+   * There is no return type specified for the function so C implicitly declares it as int.  
+   * There is no declaration of function ‘round’ in the scope.   
+   * There is no built-in function ‘round’.

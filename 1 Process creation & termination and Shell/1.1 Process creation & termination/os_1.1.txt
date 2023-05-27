@@ -1,0 +1,55 @@
+﻿Exercise 1.1
+
+Command to run the file:
+1. make
+2. ./a.out
+
+
+Working of the program:
+
+
+First, the program calls fork. Fork returns 0 in the child process; -1 for errors and process id in the parent process. If there is an error, perror is used to print a system error message for fork and the program is exited with an error message. If the child process is created successfully, we read the .csv file and print the required output. For parent process, we call waitpid(). If there is an error the program exits with an error message, else if the child process has exited, we read the csv file and and print the required output. 
+
+
+System calls:
+
+
+fork()[a]: It is used to create a new process by duplicating the calling process. The new process is called the child process while the calling process is called the parent process. There are no arguments. On success, the PID of the child process is returned in the parent, and 0 is returned in the child.  On failure, -1 is returned in the parent, no child process is created.
+
+
+waitpid(pid, &status, WUNTRACED)[b]: This system call is used to wait for state changes in a child of the calling process, and obtain information about the child whose state has changed. It suspends the execution of the calling process until the specified child changes its state. In our case, the state change is when the child exits. The arguments are pid (of the child), status and option(s). waitpid() stores the status information in the int to which status points. WUNTRACED returns if a child has stopped. On success, waitpid() returns the process ID of the child whose state has changed. On error, -1 is returned.
+* WIFEXITED(wstatus): Returns true if the child terminated normally.
+
+
+perror(): print a system error message
+
+
+exit()[c]: It causes normal process termination. exit(0) statement which means successful termination of the program, i.e. program has been executed without any error or interrupt. exit(1) means the abnormal termination of the program, i.e. some error or interrupt has occurred. It has no return value. 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+[a]https://www.man7.org/linux/man-pages/man2/fork.2.html#top_of_page
+[b]https://man7.org/linux/man-pages/man2/waitpid.2.html
+[c]https://www.geeksforgeeks.org/exit0-vs-exit1-in-c-c-with-examples/

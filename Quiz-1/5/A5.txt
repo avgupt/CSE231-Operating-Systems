@@ -1,0 +1,7 @@
+﻿Quiz 1
+Problem 5
+
+
+
+
+I would use 16-bit mode. The memory access would be faster due to lack of descriptors and all the registers would still be available. Since the RAM is only 320 KB, we don't have to worry about the RAM usage.

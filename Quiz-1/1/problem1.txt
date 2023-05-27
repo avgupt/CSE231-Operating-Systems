@@ -1,0 +1,4 @@
+﻿Quiz 1 - Problem 1
+
+
+If we don’t export _start with global, we can link the programs together. In this case, _start will not be placed in the object code's export table so linker has no way of knowing about the symbol. The compiler library provides a _start function and tells the operating system to start execution at _start, which the OS does, and then the code that runs from there sets up the basic execution environment and then continues from the _start that we wrote. But if we export _start, we cannot link the programs due to multiple entry points.

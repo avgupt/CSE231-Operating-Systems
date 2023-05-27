@@ -1,0 +1,4 @@
+﻿Quiz 1 - problem 3
+
+
+The array x has same in length in bytes as a long int array of size 8 and an int array of size 16. The char array x allocates contiguous memory of 8*64 bytes. On incrementing y or z, the pointer points to an address according to the memory size of its data type. For instance, when we increment y, it increments according to its data type i.e. 64 bits.

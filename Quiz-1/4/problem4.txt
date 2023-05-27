@@ -1,0 +1,4 @@
+﻿Quiz 1 - Problem 4
+
+
+No change needed. 64-bit computers are backward compatible i.e. we can run 32-bit programs on 64-bit computers but not vice-versa. So, a program written in x86 32-bit assembly can run in x86-64 bit assembly.
